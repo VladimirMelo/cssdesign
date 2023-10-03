@@ -1,30 +1,36 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
-<html lang="en" dir="ltr">
-  <head>
+<html lang="pt-br" dir="ltr">
+
+<head>
     <meta charset="utf-8">
-    <title>Galeria de Imagens</title>
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
+    <title>Galeria de Imagens</title>
+    <link rel="stylesheet" href="shared/css/tabler-icons.css">
+    <link rel="stylesheet" href="shared/css/style.css">
+    <script src="shared/js/script.js" defer></script>
+</head>
+
+<body>
     <h1>Galeria de imagens estilo Instagram</h1>
+
     <div class="lightbox">
-      <div class="wrapper">
-        <header>
-          <div class="details">
-            <i class="uil uil-camera"></i>
-            <span>Image Preview</span>
-          </div>
-          <div class="buttons"><i class="close-icon uil uil-times"></i></div>
-        </header>
-        <div class="preview-img">
-          <div class="img"><img src="" alt="preview-img"></div>
+        <div class="wrapper">
+            <header>
+                <div class="details">
+                    <i class="uil uil-camera"></i>
+                    <span>Preview</span>
+                </div>
+                <div class="buttons"><i class="close-icon ti ti-x"></i></div>
+            </header>
+
+            <div class="preview-img">
+                <div class="img">
+                    <img src="" alt="preview-img">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-	
+
     <!--<section class="gallery">
       <ul class="images">
         <li class="img"><img src="images/img-1.jpg" alt="img"></li>
@@ -42,20 +48,22 @@
         <li class="img"><img src="images/img-13.jpg" alt="img"></li>
       </ul>
     </section>-->
-    
-	<section class="gallery">
-		<div class="images" id='mi'></div>
-	</section>
-	
-	<script>
-    var text = '<ul>';
-    for (var i = 1; i <= 16; i++){
-	 //text = text + "<li class='file'><a href=''>Subfile " + i + "</a></li>";
-	 text = text + "<li class='img file'><span>" + i + "</span><img src='images/img-" + i + ".jpg'></li>";
-    }
- text = text +'</ul>';
 
-document.getElementById('mi').innerHTML=text; 
-</script>
-  </body>
+    <section class="gallery">
+        <div class="images" id='mi'></div>
+    </section>
+
+    <script>
+        var text = '<ul>';
+        for (var i = 1; i <= 16; i++) {
+            //text = text + "<li class='file'><a href=''>Subfile " + i + "</a></li>";
+            text = text + "<li class='img file'><span>" + i + "</span><img src='images/img-" + i + ".jpg'></li>";
+        }
+        text = text + '</ul>';
+
+        document.getElementById('mi').innerHTML = text;
+
+    </script>
+</body>
+
 </html>
